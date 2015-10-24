@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>INTELLIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+  </appdef>
+  <appdef>
+    <appname>WEBSTORM</appname>
+    <equal>com.jetbrains.WebStorm</equal>
+  </appdef>
+
+  <!-- Do not toggle "ubiquitous vim" in these IDEs -->
+  <item>
+    <name>Real ctrl-[ in IDEs</name>
+    <identifier>intellij.escape</identifier>
+    <only>INTELLIJ, WEBSTORM</only>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,
+      KeyCode::ESCAPE
+    </autogen>
+  </item>
+
+  <!-- Remap cmd-esc to cmd-backtick for app-specific cycling -->
+  <item>
+    <name>Cmd-ESC to cycle in-app</name>
+    <identifier>globalSetting.cmdescswitch</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::ESCAPE, ModifierFlag::COMMAND_L,
+      KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
+    </autogen>
+  </item>
+</root>
