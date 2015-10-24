@@ -31,4 +31,14 @@
       KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L
     </autogen>
   </item>
+  <!-- Remap shift-cmd-esc to shift-cmd-backtick for app-specific REVERSE cycling -->
+  <item>
+    <name>Shift-Cmd-ESC to reverse cycle in-app</name>
+    <identifier>globalSetting.shiftcmdescswitch</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::ESCAPE, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_R,
+      KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_R 
+    </autogen>
+  </item>
 </root>

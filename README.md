@@ -1,5 +1,4 @@
 ## configs
-This repo contains configuration files for a few common applications.
 
 ### vim
 `.vimrc` - main vim config file.  
@@ -19,3 +18,4 @@ Karabiner is a "powerful and stable keyboard customizer for OS X" (<https://pqrs
 
 #### todo:
 * add shell script to automatically create symlinks to put these files in their proper places (e.g. `ln -s vim/.vimrc ~/` etc.)
+* additional documentation on what customizations these files apply to the various applications
