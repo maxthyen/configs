@@ -41,4 +41,33 @@
       KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L, ModifierFlag::SHIFT_R 
     </autogen>
   </item>
+
+
+  <!-- Remap ctrl-hjkl to the corresponding arrow key -->
+  <item>
+    <name>ctrl-[h,j,k,l] to arrow keys</name>
+    <identifier>globalSetting.ctrlVimToArrows</identifier>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::H, ModifierFlag::CONTROL_L, 
+      KeyCode::CURSOR_LEFT
+    </autogen>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::J, ModifierFlag::CONTROL_L, 
+      KeyCode::CURSOR_DOWN
+    </autogen>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::L, ModifierFlag::CONTROL_L, 
+      KeyCode::CURSOR_RIGHT
+    </autogen>
+    <autogen>
+      __KeyToKey__ 
+      KeyCode::K, ModifierFlag::CONTROL_L, 
+      KeyCode::CURSOR_UP
+    </autogen>
+  </item>
+
+
 </root>

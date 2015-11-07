@@ -29,3 +29,4 @@ source $ZSH/oh-my-zsh.sh
 
 export NVM_DIR="/Users/commish/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -a ~/.localSpecificRc ]] && source ~/.localSpecificRc  # Allow local overrides
