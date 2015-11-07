@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="w"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repo status check for large repos faster.
@@ -23,5 +23,9 @@ plugins=(    \
   github     \
   vi-mode    \
 )
+source ~/.localSpecificRc
 
 source $ZSH/oh-my-zsh.sh
+
+export NVM_DIR="/Users/commish/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
