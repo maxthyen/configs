@@ -23,7 +23,6 @@ plugins=(    \
   github     \
   vi-mode    \
 )
-source ~/.localSpecificRc
 
 source $ZSH/oh-my-zsh.sh
 
