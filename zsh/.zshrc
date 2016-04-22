@@ -26,4 +26,6 @@ plugins=(    \
 
 source $ZSH/oh-my-zsh.sh
 
-[[ -a ~/.localSpecificRc ]] && source ~/.localSpecificRc
+export NVM_DIR="/Users/${USER}/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[[ -a ~/.localSpecificRc ]] && source ~/.localSpecificRc  # Allow local overrides
