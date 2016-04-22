@@ -69,5 +69,62 @@
     </autogen>
   </item>
 
+  <!-- Global Spotify keyboard shortcuts -->
+
+  <vkopenurldef>              
+    <name>KeyCode::VK_OPEN_URL_spotify_playpause</name>
+    <url type="shell">
+      <![CDATA[    osascript -e 'tell application "Spotify" to playpause'    ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>              
+    <name>KeyCode::VK_OPEN_URL_spotify_next</name>
+    <url type="shell">
+      <![CDATA[    osascript -e 'tell application "Spotify" to next track'    ]]>
+    </url>
+  </vkopenurldef>
+  <vkopenurldef>              
+    <name>KeyCode::VK_OPEN_URL_spotify_previous</name>
+    <url type="shell">
+      <![CDATA[    osascript -e 'tell application "Spotify" to previous track'    ]]>
+    </url>
+  </vkopenurldef>
+
+  <item>
+    <name>ctrl-cmd-[j,h,l] to control spotify</name>
+    <identifier>globalSetting.spotifyControls</identifier>
+    <!-- play/pause --> 
+    <autogen>
+      __SimultaneousKeyPresses__ 
+      @begin
+      KeyCode::J, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, 
+      @end
+      @begin
+      KeyCode::VK_OPEN_URL_spotify_playpause
+      @end
+    </autogen>
+    <!-- next --> 
+    <autogen>
+      __SimultaneousKeyPresses__ 
+      @begin
+      KeyCode::L, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, 
+      @end
+      @begin
+      KeyCode::VK_OPEN_URL_spotify_next
+      @end
+    </autogen>
+    <!-- prev --> 
+    <autogen>
+      __SimultaneousKeyPresses__ 
+      @begin
+      KeyCode::H, ModifierFlag::CONTROL_L, ModifierFlag::COMMAND_L, 
+      @end
+      @begin
+      KeyCode::VK_OPEN_URL_spotify_previous
+      @end
+    </autogen>
+  </item>
+
+
 
 </root>
