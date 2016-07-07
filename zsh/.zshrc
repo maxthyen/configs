@@ -11,6 +11,9 @@ COMPLETION_WAITING_DOTS="false"
 # under VCS as dirty. This makes repo status check for large repos faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Omit any command entered with a leading space from history
+export HIST_IGNORE_SPACE=true
+
 # User-specific init
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH
 export EDITOR='vim'
@@ -25,6 +28,15 @@ plugins=(    \
 )
 
 source $ZSH/oh-my-zsh.sh
+
+alias cleangitbranches="git branch --merged | grep -v "\*" | grep -v master | grep -v develop | xargs -n 1 git branch -d"
+ppjson() {
+  cat $1 | python -m json.tool
+}
+
+epoch2date() {
+  date -r $1 '+%m/%d/%Y %H:%M:%S'
+}
 
 export NVM_DIR="/Users/${USER}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

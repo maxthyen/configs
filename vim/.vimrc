@@ -15,6 +15,8 @@ set mouse=a
 " in that subdir (instead of typing out the full path again)
 autocmd BufEnter * lcd %:p:h
 
+set backspace=indent,eol,start
+
 " ==================================================================
 "
 " Syntax stuff
