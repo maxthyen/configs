@@ -8,12 +8,16 @@
     <appname>WEBSTORM</appname>
     <equal>com.jetbrains.WebStorm</equal>
   </appdef>
+  <appdef>
+    <appname>ATOM</appname>
+    <equal>com.github.atom</equal>
+  </appdef>
 
   <!-- Do not toggle "ubiquitous vim" in these IDEs -->
   <item>
     <name>Real ctrl-[ in IDEs</name>
     <identifier>intellij.escape</identifier>
-    <only>INTELLIJ, WEBSTORM</only>
+    <only>INTELLIJ, WEBSTORM, ATOM</only>
     <autogen>
       __KeyToKey__ 
       KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,
