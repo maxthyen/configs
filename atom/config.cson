@@ -1,0 +1,41 @@
+"*":
+  core:
+    disabledPackages: [
+      "fonts"
+      "exception-reporting"
+      "metrics"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "*.swp"
+    ]
+    themes: [
+      "genesis-ui"
+      "base16-tomorrow-dark-theme"
+    ]
+  editor:
+    preferredLineLength: 120
+  "genesis-ui":
+    distractionFree:
+      hideBottom: false
+      hideFiles: false
+      hideTabs: false
+  "julia-client":
+    enableMenu: true
+    enableToolBar: true
+    juliaPath: "/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin/julia"
+    launchOnStartup: true
+  "tool-bar":
+    position: "Left"
+    visible: false
+  "uber-juno":
+    disable: true
+  "vim-mode":
+    useSmartcaseForSearch: true
+  welcome:
+    showOnStartup: false

@@ -1,0 +1,5 @@
+## to backup packages:
+apm list --installed --bare > packages.list
+
+## to restore:
+apm install `cat packages.list`

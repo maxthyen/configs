@@ -1,0 +1,51 @@
+// style the background color of the tree view
+.tree-view {
+  // background-color: whitesmoke;
+}
+
+atom-text-editor {
+  color: white;
+}
+
+// To style other content in the text editor's shadow DOM, use the ::shadow expression
+atom-text-editor::shadow .cursor {
+  border-color: red;
+}
+
+atom-text-editor.vim-mode.normal-mode,
+atom-text-editor.vim-mode.operator-pending-mode,
+atom-text-editor.vim-mode.visual-mode
+{
+  &.is-focused {
+    &::shadow, // shadow-DOM enabled
+    &          // shadow-DOM disabled
+    {
+      .cursor {
+        // background-color: red;
+      }
+      .blink-off .cursor { // cursor style while blinking
+        // background-color: blue;
+      }
+      .bracket-matcher {
+        // background-color: rgb(59,117,140) !important;
+        background-color: red;
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+.editor {
+  -webkit-font-smoothing: none;
+  // other options:
+  // Ubuntu Mono, Andale Mono, Source Code Pro, Droid Sans Mono, Mononoki
+  // font-family: Andale Mono;
+  font-family: Monaco;
+  font-size: 12px;
+  line-height: 17px;
+}
+
+// e.g. file tree, tabs, etc
+atom-workspace {
+    // font-family: Mononoki;
+}
