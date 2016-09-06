@@ -15,7 +15,7 @@
       "*.swp"
     ]
     themes: [
-      "genesis-ui"
+      "base-16-ocean-dark-ui-theme"
       "base16-tomorrow-dark-theme"
     ]
   editor:
@@ -25,11 +25,15 @@
       hideBottom: false
       hideFiles: false
       hideTabs: false
+  "isotope-light-ui": {}
   "julia-client":
     enableMenu: true
     enableToolBar: true
     juliaPath: "/Applications/Julia-0.4.6.app/Contents/Resources/julia/bin/julia"
     launchOnStartup: true
+  linter:
+    gutterEnabled: false
+    gutterPosition: "Left"
   "tool-bar":
     position: "Left"
     visible: false
@@ -39,3 +43,6 @@
     useSmartcaseForSearch: true
   welcome:
     showOnStartup: false
+".diff.source":
+  editor:
+    preferredLineLength: 120

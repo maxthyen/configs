@@ -3,10 +3,6 @@
   // background-color: whitesmoke;
 }
 
-atom-text-editor {
-  color: white;
-}
-
 // To style other content in the text editor's shadow DOM, use the ::shadow expression
 atom-text-editor::shadow .cursor {
   border-color: red;
@@ -27,12 +23,15 @@ atom-text-editor.vim-mode.visual-mode
         // background-color: blue;
       }
       .bracket-matcher {
-        // background-color: rgb(59,117,140) !important;
         background-color: red;
         opacity: 0.5;
       }
     }
   }
+}
+
+atom-text-editor::shadow .gutter {
+  margin-right: -10px;
 }
 
 .editor {
@@ -42,10 +41,10 @@ atom-text-editor.vim-mode.visual-mode
   // font-family: Andale Mono;
   font-family: Monaco;
   font-size: 12px;
-  line-height: 17px;
+  line-height: 15px;
 }
 
 // e.g. file tree, tabs, etc
 atom-workspace {
-    // font-family: Mononoki;
+  // font-family: Mononoki;
 }
