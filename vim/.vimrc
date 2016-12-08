@@ -59,7 +59,6 @@ set cursorline      " highlight the cursor's current vertical position
 let g:zenburn_high_Contrast=1
 colorscheme darkzen
 
-
 " ==================================================================
 "
 " Shortcuts
@@ -73,9 +72,9 @@ map <F4> :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 " F5 opens the current file in a new vertical split
 map <F5> :vs %<CR>
 
- 
 " ==================================================================
 "
 " Plugins
 "
-
+execute pathogen#infect()
+let g:ctrlp_custom_ignore='.git\|node_modules\|bower_components\|dev-dist'
