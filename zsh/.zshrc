@@ -29,6 +29,7 @@ plugins=(    \
 
 source $ZSH/oh-my-zsh.sh
 
+alias calc="libreoffice --calc"
 alias cleangitbranches="git branch --merged | grep -v "\*" | grep -v master | grep -v develop | xargs -n 1 git branch -d"
 ppjson() {
   cat $1 | python -m json.tool
@@ -38,6 +39,6 @@ epoch2date() {
   date -r $1 '+%m/%d/%Y %H:%M:%S'
 }
 
-export NVM_DIR="/Users/${USER}/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[[ -a ~/.localSpecificRc ]] && source ~/.localSpecificRc  # Allow local overrides
+[[ -a ~/.uncommonRc ]] && source ~/.uncommonRc  # Allow local overrides
