@@ -41,7 +41,8 @@ set nohlsearch      " don't highlight *all* search terms, only the next one
 set incsearch       " search for words incrementally as you type
 set novisualbell
 set number          " line numbers
-nmap <C-N><C-N> :set invnumber<CR> " line # toggle shortcut
+" removing for now...conflicts with nerdtree and is rarely used
+" nmap <C-N><C-N> :set invnumber<CR> " line # toggle shortcut
 set ruler
 set showcmd         " show the current command being typed
 set showmatch
@@ -78,3 +79,11 @@ map <F5> :vs %<CR>
 "
 execute pathogen#infect()
 let g:ctrlp_custom_ignore='.git\|node_modules\|bower_components\|dev-dist'
+
+" nerdtree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+map <C-n> :NERDTreeToggle<CR>
+
+" ctrlp
+set wildignore+=report/*,*.swp
