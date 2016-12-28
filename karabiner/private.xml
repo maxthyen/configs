@@ -5,6 +5,10 @@
     <equal>com.jetbrains.intellij</equal>
   </appdef>
   <appdef>
+    <appname>INTELLIJ_EAP</appname>
+    <equal>com.jetbrains.intellij-EAP</equal>
+  </appdef>
+  <appdef>
     <appname>WEBSTORM</appname>
     <equal>com.jetbrains.WebStorm</equal>
   </appdef>
@@ -17,7 +21,7 @@
   <item>
     <name>Real ctrl-[ in IDEs</name>
     <identifier>intellij.escape</identifier>
-    <only>INTELLIJ, WEBSTORM, ATOM</only>
+    <only>INTELLIJ, INTELLIJ_EAP, WEBSTORM, ATOM</only>
     <autogen>
       __KeyToKey__ 
       KeyCode::BRACKET_LEFT, ModifierFlag::CONTROL_L,
